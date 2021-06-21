@@ -20,9 +20,12 @@
     "test.format": "prettier . --check",
     "lint": "eslint . --fix",
     "test.lint": "eslint .",
-    "bump": "ncu -u"
+    "bump": "ncu -u",
+    "test": "atom --test ./test/"
   },
+  "atomTestRunner": "./test/runner",
   "devDependencies": {
+    "atom-jasmine3-test-runner": "^5.2.6",
     "eslint": "^7.29.0",
     "eslint-config-atomic": "^1.16.1",
     "prettier-config-atomic": "^2.0.5"

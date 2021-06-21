@@ -1,11 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  atom-jasmine3-test-runner: ^5.2.6
   eslint: ^7.29.0
   eslint-config-atomic: ^1.16.1
   prettier-config-atomic: ^2.0.5
 
 devDependencies:
+  atom-jasmine3-test-runner: 5.2.6
   eslint: 7.29.0
   eslint-config-atomic: 1.16.1
   prettier-config-atomic: 2.0.5
@@ -328,6 +330,18 @@ packages:
       fastq: 1.11.0
     dev: true
 
+  /@types/atom/1.40.10:
+    resolution: {integrity: sha512-aNFUhCuR6nmTTMoYKfWWMifZ3IcNETLWC75hCdg3i1/OvirfR/5qm1wfiISBb4s/TPM2YVEtxytCdWhKJuEhzw==}
+    dependencies:
+      '@types/node': 15.12.4
+    dev: true
+    optional: true
+
+  /@types/jasmine/3.7.7:
+    resolution: {integrity: sha512-yZzGe1d1T0y+imXDZ79F030nn8qbmiwpWKCZKvKN0KbTzwXAVYShUxkIxu1ba+vhIdabTGVGCfbtZC0oOam8TQ==}
+    dev: true
+    optional: true
+
   /@types/json-schema/7.0.7:
     resolution: {integrity: sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==}
     dev: true
@@ -341,6 +355,11 @@ packages:
     dependencies:
       '@types/unist': 2.0.3
     dev: true
+
+  /@types/node/15.12.4:
+    resolution: {integrity: sha512-zrNj1+yqYF4WskCMOHwN+w9iuD12+dGm0rQ35HLl9/Ouuq52cEtd0CH9qMgrdNmi5ejC1/V7vKEXYubB+65DkA==}
+    dev: true
+    optional: true
 
   /@types/unist/2.0.3:
     resolution: {integrity: sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==}
@@ -578,6 +597,34 @@ packages:
   /astral-regex/2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
+    dev: true
+
+  /async/1.5.2:
+    resolution: {integrity: sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=}
+    dev: true
+
+  /atom-jasmine3-test-runner/5.2.6:
+    resolution: {integrity: sha512-4JQ55hOmUMyMmxkevtBVnVPH3jMm2Z7X9UoQOPYo58+0o6//47B/7ELno6ldq/09YnbB0iKA18/zMDDzNUgzzg==}
+    dependencies:
+      etch: 0.14.1
+      find-parent-dir: 0.3.1
+      fs-plus: 3.1.1
+      glob: 7.1.7
+      grim: 2.0.3
+      jasmine: 3.7.0
+      jasmine-local-storage: 1.1.1_jasmine@3.7.0
+      jasmine-pass: 1.1.0_jasmine@3.7.0
+      jasmine-should-fail: 1.1.7_jasmine@3.7.0
+      jasmine-unspy: 1.1.1_jasmine@3.7.0
+      jasmine2-atom-matchers: 1.1.9_jasmine@3.7.0
+      jasmine2-focused: 1.1.1_jasmine@3.7.0
+      jasmine2-json: 1.1.1_jasmine@3.7.0
+      jasmine2-tagged: 1.1.1_jasmine@3.7.0
+      temp: 0.9.4
+      underscore-plus: 1.7.0
+    optionalDependencies:
+      '@types/atom': 1.40.10
+      '@types/jasmine': 3.7.7
     dev: true
 
   /axe-core/3.5.6:
@@ -1427,6 +1474,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /etch/0.14.1:
+    resolution: {integrity: sha512-+IwqSDBhaQFMUHJu4L/ir0dhDoW5IIihg4Z9lzsIxxne8V0PlSg0gnk2STaKWjGJQnDR4cxpA+a/dORX9kycTA==}
+    dev: true
+
+  /event-kit/2.5.3:
+    resolution: {integrity: sha512-b7Qi1JNzY4BfAYfnIRanLk0DOD1gdkWHT4GISIn8Q2tAf3LpU8SP2CMwWaq40imYoKWbtN4ZhbSRxvsnikooZQ==}
+    dev: true
+
   /exit/0.1.2:
     resolution: {integrity: sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=}
     engines: {node: '>= 0.8.0'}
@@ -1476,6 +1531,10 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
+  /find-parent-dir/0.3.1:
+    resolution: {integrity: sha512-o4UcykWV/XN9wm+jMEtWLPlV8RXCZnMhQI6F6OdHeSez7iiJWePw8ijOlskJZMsaQoGR/b7dH6lO02HhaTN7+A==}
+    dev: true
+
   /find-up/2.1.0:
     resolution: {integrity: sha1-RdG35QbHF93UgndaK3eSCjwMV6c=}
     engines: {node: '>=4'}
@@ -1493,6 +1552,15 @@ packages:
 
   /flatted/3.1.1:
     resolution: {integrity: sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==}
+    dev: true
+
+  /fs-plus/3.1.1:
+    resolution: {integrity: sha512-Se2PJdOWXqos1qVTkvqqjb0CSnfBnwwD+pq+z4ksT+e97mEShod/hrNg0TRCCsXPbJzcIq+NuzQhigunMWMJUA==}
+    dependencies:
+      async: 1.5.2
+      mkdirp: 0.5.5
+      rimraf: 2.7.1
+      underscore-plus: 1.7.0
     dev: true
 
   /fs.realpath/1.0.0:
@@ -1569,6 +1637,12 @@ packages:
 
   /graceful-fs/4.2.6:
     resolution: {integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==}
+    dev: true
+
+  /grim/2.0.3:
+    resolution: {integrity: sha512-FM20Ump11qYLK9k9DbL8yzVpy+YBieya1JG15OeH8s+KbHq8kL4SdwRtURwIUHniSxb24EoBUpwKfFjGNVi4/Q==}
+    dependencies:
+      event-kit: 2.5.3
     dev: true
 
   /has-ansi/2.0.0:
@@ -1786,6 +1860,88 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
+  /jasmine-core/3.7.1:
+    resolution: {integrity: sha512-DH3oYDS/AUvvr22+xUBW62m1Xoy7tUlY1tsxKEJvl5JeJ7q8zd1K5bUwiOxdH+erj6l2vAMM3hV25Xs9/WrmuQ==}
+    dev: true
+
+  /jasmine-local-storage/1.1.1_jasmine@3.7.0:
+    resolution: {integrity: sha512-GBqtas3l8SBo39NwjbHuzWhQhgHabq/mVVDabGvKLUXRFH8GtPy4jPKRIMDLWC+q7S+q4M6pIY4OHoVuU8hsCQ==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine-pass/1.1.0_jasmine@3.7.0:
+    resolution: {integrity: sha512-gtsHtIj1zNS/90REIpyDH2HRSW7vFwKMau5A2hcfL/RsSwUiKAS8EdOY1Z67m8giyaUMe7I8O7SzJF2oevCX0A==}
+    peerDependencies:
+      jasmine: <4
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine-should-fail/1.1.7_jasmine@3.7.0:
+    resolution: {integrity: sha512-MNtae0/NUAU0OknPcM4cTA04JEXmxMH0+hqZxBjdt4+8LvDqm+oYIQcY70OqpRwVhTTcAyG7HxiPw/4AGlxfgw==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine-unspy/1.1.1_jasmine@3.7.0:
+    resolution: {integrity: sha512-hTuMR1ju73BkGG8OCY6ObtimVBqnyThwUuclXW81lOiT/pyBt2W5nZtNAd8N7jzUfjQDd7+m+0DPm5Ecf6T2Pw==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine/3.7.0:
+    resolution: {integrity: sha512-wlzGQ+cIFzMEsI+wDqmOwvnjTvolLFwlcpYLCqSPPH0prOQaW3P+IzMhHYn934l1imNvw07oCyX+vGUv3wmtSQ==}
+    hasBin: true
+    dependencies:
+      glob: 7.1.7
+      jasmine-core: 3.7.1
+    dev: true
+
+  /jasmine2-atom-matchers/1.1.9_jasmine@3.7.0:
+    resolution: {integrity: sha512-YFX2YZx+kmeziPnmZf4YBKkNATA3kBJTdZe4/1QJepeU5zNFty+/PrX/6Nvdfh0Lca30fbc5rn0lF8RZ/spHZQ==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+      jquery: 3.6.0
+      underscore-plus: 1.7.0
+    dev: true
+
+  /jasmine2-focused/1.1.1_jasmine@3.7.0:
+    resolution: {integrity: sha512-2NnQD+Lwqu/0RIVentOiDtdsjhP/4jJooG88rQC3A6lKHxnm2d9Q/wGbQBDZlIA7bDUrQpuHZ6d2A/lACLwfhQ==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine2-json/1.1.1_jasmine@3.7.0:
+    resolution: {integrity: sha512-D8dFHVDsDZpqgYK4eR3SYkMXypRjK0MpnHzVkO38ByXe7R3QaZDsoRt3Kh4rqI1U4iq9hkxHuKr+gy+OzuL+8g==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jasmine2-tagged/1.1.1_jasmine@3.7.0:
+    resolution: {integrity: sha512-PK/83f9hBI6R/gGZ8zEYHt4OUtZu3xpcoUFICMBVsdbbanrhCCNC3EkWldIQgvuSHaUMhVptXAihWjNJI3uiRw==}
+    peerDependencies:
+      jasmine: '>=2 <4'
+    dependencies:
+      jasmine: 3.7.0
+    dev: true
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: true
+
   /js-tokens/3.0.2:
     resolution: {integrity: sha1-mGbfOVECEw449/mWvOtlRDIJwls=}
     dev: true
@@ -1996,6 +2152,13 @@ packages:
 
   /minimist/1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
+    dev: true
+
+  /mkdirp/0.5.5:
+    resolution: {integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.5
     dev: true
 
   /ms/2.0.0:
@@ -2339,6 +2502,20 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
+  /rimraf/2.6.3:
+    resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    hasBin: true
+    dependencies:
+      glob: 7.1.7
+    dev: true
+
+  /rimraf/2.7.1:
+    resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    hasBin: true
+    dependencies:
+      glob: 7.1.7
+    dev: true
+
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
@@ -2546,6 +2723,14 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
+  /temp/0.9.4:
+    resolution: {integrity: sha512-yYrrsWnrXMcdsnu/7YMYAofM1ktpL5By7vZhf15CrXijWWrEYZks5AXBudalfSWJLlnen/QUJUB5aoB0kqZUGA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      mkdirp: 0.5.5
+      rimraf: 2.6.3
+    dev: true
+
   /text-table/0.2.0:
     resolution: {integrity: sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=}
     dev: true
@@ -2615,6 +2800,16 @@ packages:
       has-bigints: 1.0.1
       has-symbols: 1.0.2
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /underscore-plus/1.7.0:
+    resolution: {integrity: sha512-A3BEzkeicFLnr+U/Q3EyWwJAQPbA19mtZZ4h+lLq3ttm9kn8WC4R3YpuJZEXmWdLjYP47Zc8aLZm9kwdv+zzvA==}
+    dependencies:
+      underscore: 1.13.1
+    dev: true
+
+  /underscore/1.13.1:
+    resolution: {integrity: sha512-hzSoAVtJF+3ZtiFX0VgfFPHEDRm7Y/QPjGyNo4TVdnDTdft3tr8hEkD25a1jC+TjTuE7tkHGKkhwCgs9dgBB2g==}
     dev: true
 
   /unist-util-stringify-position/2.0.3:
