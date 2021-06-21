@@ -5,12 +5,14 @@ specifiers:
   eslint: ^7.29.0
   eslint-config-atomic: ^1.16.1
   prettier-config-atomic: ^2.0.5
+  requirefresh: ^5.1.0
 
 devDependencies:
   atom-jasmine3-test-runner: 5.2.6
   eslint: 7.29.0
   eslint-config-atomic: 1.16.1
   prettier-config-atomic: 2.0.5
+  requirefresh: 5.1.0
 
 packages:
 
@@ -2476,6 +2478,11 @@ packages:
   /require-from-string/2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /requirefresh/5.1.0:
+    resolution: {integrity: sha512-QiD7B06aSM+2YAbJzxeO8wpSxtqxcD7uNBwNDLCgu1YA/eEMpY5rC8nlazlluxq/mWqf0GK0eLUMC5WFQehCUw==}
+    engines: {node: '>=4'}
     dev: true
 
   /resolve-from/4.0.0:
