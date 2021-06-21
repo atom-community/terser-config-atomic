@@ -1,0 +1,30 @@
+{
+  "name": "terser-config-atomic",
+  "main": "./src/.terserrc.js",
+  "version": "0.0.0",
+  "files": [
+    "src"
+  ],
+  "author": "Amin Yahyaabadi",
+  "description": "The Terser configuration used in atom-community",
+  "keywords": [
+    "terser",
+    "minify",
+    "preset",
+    "config"
+  ],
+  "repository": "https://github.com/atom-community/terser-config-atomic",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "test.format": "prettier . --check",
+    "lint": "eslint . --fix",
+    "test.lint": "eslint .",
+    "bump": "ncu -u"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-atomic": "^1.16.1",
+    "prettier-config-atomic": "^2.0.5"
+  }
+}
