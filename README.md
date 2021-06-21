@@ -41,7 +41,7 @@ The config is adapted based on `NODE_ENV`, so make sure to run your scripts with
 - development: `cross-env NODE_ENV=development your_dev_script`
 - production: `cross-env NODE_ENV=production your_prod_script`
 
-**Node**: [`cross-env`](https://www.npmjs.com/package/cross-env) is an npm package that you need to install.
+**Note**: [`cross-env`](https://www.npmjs.com/package/cross-env) is an npm package that you need to install.
 
 ## Modifying the config
 
