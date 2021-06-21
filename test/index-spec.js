@@ -28,4 +28,18 @@ describe("Terser-Config-Atomic", () => {
     expect(TerserOptions.mangle).toBeFalse()
     expect(TerserOptions.format.beautify).toBeTrue()
   })
+  it("test", () => {
+    process.env.NODE_ENV = "test"
+
+    const TerserOptions = requireFresh(terserFile)
+
+    expect(typeof TerserOptions).toBe("object")
+    expect(TerserOptions.compress.global_defs).toEqual({
+      "@atom.inSpecMode": "() => true",
+      "@atom.inDevMode": "() => false",
+    })
+    expect(TerserOptions.compress.passes).toBe(3)
+    expect(TerserOptions.mangle).toBeFalse()
+    expect(TerserOptions.format.beautify).toBeTrue()
+  })
 })
