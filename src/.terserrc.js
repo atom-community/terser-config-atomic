@@ -5,6 +5,8 @@ const isReadable = isDev || isTest
 const ProductionCompress = {
   global_defs: {
     // remove dev and test specific code for production
+    "process.env.NODE_ENV": process.env.NODE_ENV || "production",
+    "process.env.BABEL_ENV": process.env.BABEL_ENV || process.env.NODE_ENV || "production",
     "@atom.inSpecMode": !isTest ? "() => false" : "() => true",
     "@atom.inDevMode": !isDev ? "() => false" : "() => true",
   },

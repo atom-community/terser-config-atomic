@@ -11,6 +11,8 @@ describe("Terser-Config-Atomic", () => {
 
     expect(typeof TerserOptions).toBe("object")
     expect(TerserOptions.compress.global_defs).toEqual({
+      "process.env.NODE_ENV": "production",
+      "process.env.BABEL_ENV": "production",
       "@atom.inSpecMode": "() => false",
       "@atom.inDevMode": "() => false",
     })
@@ -35,6 +37,8 @@ describe("Terser-Config-Atomic", () => {
 
     expect(typeof TerserOptions).toBe("object")
     expect(TerserOptions.compress.global_defs).toEqual({
+      "process.env.NODE_ENV": "test",
+      "process.env.BABEL_ENV": "test",
       "@atom.inSpecMode": "() => true",
       "@atom.inDevMode": "() => false",
     })
