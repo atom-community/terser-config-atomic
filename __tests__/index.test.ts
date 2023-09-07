@@ -1,17 +1,9 @@
-import { requireFresh } from "requirefresh"
 import assert from "assert"
-import * as path from "path"
-
-type Terserrc = typeof import("../src/.terserrc")
-function requireTerserrc(): Terserrc {
-  return requireFresh(path.join(path.dirname(__dirname), "src", ".terserrc.js"))
-}
+import { getTerserrc } from "../src/get-terserrc.js"
 
 describe("Terser-Config-Atomic", () => {
   it("production", () => {
-    process.env.NODE_ENV = "production"
-
-    const TerserOptions = requireTerserrc()
+    const TerserOptions = getTerserrc("production", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     assert(typeof TerserOptions.compress === "object")
@@ -28,7 +20,7 @@ describe("Terser-Config-Atomic", () => {
   it("development", () => {
     process.env.NODE_ENV = "development"
 
-    const TerserOptions = requireTerserrc()
+    const TerserOptions = getTerserrc("development", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     expect(TerserOptions.compress).toBe(false)
@@ -38,7 +30,7 @@ describe("Terser-Config-Atomic", () => {
   it("test", () => {
     process.env.NODE_ENV = "test"
 
-    const TerserOptions = requireTerserrc()
+    const TerserOptions = getTerserrc("test", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     assert(typeof TerserOptions.compress === "object")

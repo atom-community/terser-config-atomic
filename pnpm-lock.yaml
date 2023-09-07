@@ -26,9 +26,6 @@ devDependencies:
   prettier-config-atomic:
     specifier: ^3.1.0
     version: 3.1.0
-  requirefresh:
-    specifier: ^5.4.0
-    version: 5.4.0
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@swc/core@1.3.83)(@types/node@15.12.4)(typescript@5.2.2)
@@ -4847,11 +4844,6 @@ packages:
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /requirefresh@5.4.0:
-    resolution: {integrity: sha512-RjOOVjs2pZHblBDpXyE9uH2c9fjXOlkKjhn8z3PwhZLG0uBF2IBzjHHZG4hQcm1qGlKxk2qJU/5eVkyxMD5MrA==}
-    engines: {node: '>=4'}
     dev: true
 
   /resolve-cwd@3.0.0:
