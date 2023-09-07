@@ -1,6 +1,6 @@
 {
   "name": "terser-config-atomic",
-  "main": "./src/.terserrc.js",
+  "dist": "./dist/.terserrc.js",
   "version": "0.1.1",
   "files": [
     "src"
@@ -16,6 +16,8 @@
   "repository": "https://github.com/atom-community/terser-config-atomic",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
     "format": "prettier --write .",
     "test.format": "prettier . --check",
     "lint": "eslint . --fix",

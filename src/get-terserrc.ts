@@ -1,4 +1,4 @@
-function getTerserrc(NODE_ENV, BABEL_ENV) {
+export function getTerserOptions(NODE_ENV: string = "production", BABEL_ENV?: string) {
   const isDev = NODE_ENV === "development"
   const isTest = NODE_ENV === "test"
   const isReadable = isDev || isTest
@@ -42,4 +42,3 @@ function getTerserrc(NODE_ENV, BABEL_ENV) {
   }
   return TerserOptions
 }
-exports.getTerserrc = getTerserrc
