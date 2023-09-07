@@ -1,22 +1,17 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 import type { Config } from "jest"
 
-const config: Config = {
-  // Automatically clear mock calls, instances, contexts and results before every test
-  clearMocks: true,
-
-  // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
-
-  // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
-
-  // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+const jestConfig: Config = {
+  testMatch: ["**/*.test.ts"],
+  testEnvironment: "node",
+  extensionsToTreatAsEsm: [".ts", ".tsx", ".jsx"],
+  transformIgnorePatterns: [], // transform node_modules
+  transform: {
+    "^.+\\.(t|j)sx?$": "@swc/jest",
+  },
+  // coverage
+  collectCoverageFrom: ["src/**/*.{ts,tsx,js,jsx}"],
+  coveragePathIgnorePatterns: ["assets", ".css.d.ts"],
+  verbose: true,
 }
 
-export default config
+export default jestConfig

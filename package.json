@@ -25,6 +25,8 @@
   },
   "atomTestRunner": "./test/runner",
   "devDependencies": {
+    "@swc/jest": "^0.2.29",
+    "@types/jest": "^29.5.4",
     "eslint": "^8.48.0",
     "eslint-config-atomic": "^1.19.3",
     "jest": "^29.6.4",

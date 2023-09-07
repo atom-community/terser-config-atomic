@@ -1,15 +1,20 @@
-const { requireFresh } = require("requirefresh")
-const path = require("path")
+import { requireFresh } from "requirefresh"
+import assert from "assert"
+import * as path from "path"
 
-const terserFile = path.join(path.dirname(__dirname), "src", ".terserrc.js")
+type Terserrc = typeof import("../src/.terserrc")
+function requireTerserrc(): Terserrc {
+  return requireFresh(path.join(path.dirname(__dirname), "src", ".terserrc.js"))
+}
 
 describe("Terser-Config-Atomic", () => {
   it("production", () => {
     process.env.NODE_ENV = "production"
 
-    const TerserOptions = requireFresh(terserFile)
+    const TerserOptions = requireTerserrc()
 
     expect(typeof TerserOptions).toBe("object")
+    assert(typeof TerserOptions.compress === "object")
     expect(TerserOptions.compress.global_defs).toEqual({
       "process.env.NODE_ENV": "production",
       "process.env.BABEL_ENV": "production",
@@ -17,25 +22,26 @@ describe("Terser-Config-Atomic", () => {
       "@atom.inDevMode": "() => false",
     })
     expect(TerserOptions.compress.passes).toBe(3)
-    expect(TerserOptions.mangle).toBeTrue()
-    expect(TerserOptions.format.beautify).toBeFalse()
+    expect(TerserOptions.mangle).toBe(true)
+    expect(TerserOptions.format.beautify).toBe(false)
   })
   it("development", () => {
     process.env.NODE_ENV = "development"
 
-    const TerserOptions = requireFresh(terserFile)
+    const TerserOptions = requireTerserrc()
 
     expect(typeof TerserOptions).toBe("object")
-    expect(TerserOptions.compress).toBeFalse()
-    expect(TerserOptions.mangle).toBeFalse()
-    expect(TerserOptions.format.beautify).toBeTrue()
+    expect(TerserOptions.compress).toBe(false)
+    expect(TerserOptions.mangle).toBe(false)
+    expect(TerserOptions.format.beautify).toBe(true)
   })
   it("test", () => {
     process.env.NODE_ENV = "test"
 
-    const TerserOptions = requireFresh(terserFile)
+    const TerserOptions = requireTerserrc()
 
     expect(typeof TerserOptions).toBe("object")
+    assert(typeof TerserOptions.compress === "object")
     expect(TerserOptions.compress.global_defs).toEqual({
       "process.env.NODE_ENV": "test",
       "process.env.BABEL_ENV": "test",
@@ -43,7 +49,7 @@ describe("Terser-Config-Atomic", () => {
       "@atom.inDevMode": "() => false",
     })
     expect(TerserOptions.compress.passes).toBe(3)
-    expect(TerserOptions.mangle).toBeFalse()
-    expect(TerserOptions.format.beautify).toBeTrue()
+    expect(TerserOptions.mangle).toBe(false)
+    expect(TerserOptions.format.beautify).toBe(true)
   })
 })
