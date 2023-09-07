@@ -1,6 +1,6 @@
 {
   "name": "terser-config-atomic",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "The Terser configuration used in atom-community",
   "repository": "https://github.com/atom-community/terser-config-atomic",
   "license": "MIT",
