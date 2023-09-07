@@ -44,6 +44,7 @@ export function getTerserOptions(
     compress: isDev ? false : ProductionCompress,
     mangle: isReadable ? false : true,
     format: {
+      comments: isReadable,
       beautify: isReadable,
     },
   }
