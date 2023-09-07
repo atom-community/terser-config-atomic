@@ -21,15 +21,16 @@
     "lint": "eslint . --fix",
     "test.lint": "eslint .",
     "bump": "ncu -u",
-    "test": "atom --test ./test/"
+    "test": "jest"
   },
   "atomTestRunner": "./test/runner",
   "devDependencies": {
-    "atom-jasmine3-test-runner": "^5.2.13",
     "eslint": "^8.48.0",
     "eslint-config-atomic": "^1.19.3",
+    "jest": "^29.6.4",
     "prettier": "^3.0.3",
     "prettier-config-atomic": "^3.1.0",
-    "requirefresh": "^5.4.0"
+    "requirefresh": "^5.4.0",
+    "ts-node": "^10.9.1"
   }
 }
