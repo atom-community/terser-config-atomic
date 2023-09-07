@@ -11,7 +11,6 @@ export function getTerserOptions(NODE_ENV: string = "production", BABEL_ENV: str
       "@atom.inSpecMode": !isTest ? "() => false" : "() => true",
       "@atom.inDevMode": !isDev ? "() => false" : "() => true",
     },
-    ecma: "2018",
     toplevel: true,
     hoist_vars: false,
     hoist_funs: true,
@@ -26,15 +25,12 @@ export function getTerserOptions(NODE_ENV: string = "production", BABEL_ENV: str
     unsafe_proto: true,
     unsafe_regexp: true,
     unsafe_undefined: true,
-    passes: 3,
+    passes: 2,
   }
 
   const TerserOptions = {
     // "module": false, // controlled by Parcel
     compress: isDev ? false : ProductionCompress,
-    parse: {
-      ecma: 2020,
-    },
     mangle: isReadable ? false : true,
     format: {
       beautify: isReadable,
