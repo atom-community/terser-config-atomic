@@ -1,5 +1,5 @@
 import assert from "assert"
-import { getTerserOptions } from "../src/get-terserrc"
+import { getTerserOptions } from "../src"
 
 describe("Terser-Config-Atomic", () => {
   it("production", () => {
@@ -13,7 +13,7 @@ describe("Terser-Config-Atomic", () => {
       "@atom.inSpecMode": "() => false",
       "@atom.inDevMode": "() => false",
     })
-    expect(TerserOptions.compress.passes).toBe(3)
+    expect(TerserOptions.compress.passes).toBe(2)
     expect(TerserOptions.mangle).toBe(true)
     expect(TerserOptions.format.beautify).toBe(false)
   })
@@ -40,7 +40,7 @@ describe("Terser-Config-Atomic", () => {
       "@atom.inSpecMode": "() => true",
       "@atom.inDevMode": "() => false",
     })
-    expect(TerserOptions.compress.passes).toBe(3)
+    expect(TerserOptions.compress.passes).toBe(2)
     expect(TerserOptions.mangle).toBe(false)
     expect(TerserOptions.format.beautify).toBe(true)
   })
