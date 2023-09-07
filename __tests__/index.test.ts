@@ -1,9 +1,9 @@
 import assert from "assert"
-import { getTerserOptions } from "../src"
+import { buildTerserOptions } from "../src/builder"
 
 describe("Terser-Config-Atomic", () => {
   it("production", () => {
-    const TerserOptions = getTerserOptions("production", undefined)
+    const TerserOptions = buildTerserOptions("production", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     assert(typeof TerserOptions.compress === "object")
@@ -20,7 +20,7 @@ describe("Terser-Config-Atomic", () => {
   it("development", () => {
     process.env.NODE_ENV = "development"
 
-    const TerserOptions = getTerserOptions("development", undefined)
+    const TerserOptions = buildTerserOptions("development", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     expect(TerserOptions.compress).toBe(false)
@@ -30,7 +30,7 @@ describe("Terser-Config-Atomic", () => {
   it("test", () => {
     process.env.NODE_ENV = "test"
 
-    const TerserOptions = getTerserOptions("test", undefined)
+    const TerserOptions = buildTerserOptions("test", undefined)
 
     expect(typeof TerserOptions).toBe("object")
     assert(typeof TerserOptions.compress === "object")

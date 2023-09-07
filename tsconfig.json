@@ -28,5 +28,5 @@
     "outDir": "./dist"
   },
   "compileOnSave": false,
-  "include": ["./src", "./jest.config.ts", "./__tests__"]
+  "include": ["./src/*.ts", "./jest.config.ts", "./__tests__"]
 }

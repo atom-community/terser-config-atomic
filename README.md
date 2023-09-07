@@ -48,8 +48,8 @@ The config is adapted based on `NODE_ENV`, so make sure to run your scripts with
 You can import the builder function to create a custom config:
 
 ```ts
-import { getTerserOptions } from "terser-config-atomic/dist/index.js"
-module.exports = getTerserOptions(process.env.NODE_ENV, process.env.BABEL_ENV)
+import { buildTerserOptions } from "terser-config-atomic/dist/builder.js"
+module.exports = buildTerserOptions(process.env.NODE_ENV, process.env.BABEL_ENV)
 ```
 
 The builder function:
@@ -62,7 +62,7 @@ The builder function:
   @param BABEL_ENV - The Babel environment (defaults to NODE_ENV).
   @param unsafeCompress - Whether to use unsafe compression options (defaults to false).
 */
-export function getTerserOptions(
+export function buildTerserOptions(
   NODE_ENV: string = "production",
   BABEL_ENV: string | undefined = undefined,
   unsafeCompress: boolean = false,
