@@ -1,32 +1,26 @@
 {
   "name": "terser-config-atomic",
-  "main": "dist/terserrc.js",
   "version": "0.1.1",
+  "description": "The Terser configuration used in atom-community",
+  "repository": "https://github.com/atom-community/terser-config-atomic",
+  "license": "MIT",
+  "author": "Amin Yahyaabadi",
+  "main": "dist/terserrc.js",
   "files": [
     "src",
     "dist"
   ],
-  "author": "Amin Yahyaabadi",
-  "description": "The Terser configuration used in atom-community",
-  "keywords": [
-    "terser",
-    "minify",
-    "preset",
-    "config"
-  ],
-  "repository": "https://github.com/atom-community/terser-config-atomic",
-  "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build",
-    "format": "prettier --write .",
-    "test.format": "prettier . --check",
-    "lint": "eslint . --fix",
-    "test.lint": "eslint .",
     "bump": "ncu -u",
-    "test": "jest"
+    "format": "prettier --write .",
+    "lint": "eslint . --fix",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test.format": "prettier . --check",
+    "test.lint": "eslint ."
   },
-  "atomTestRunner": "./test/runner",
+  "prettier": "prettier-config-atomic",
   "devDependencies": {
     "@swc/jest": "^0.2.29",
     "@types/jest": "^29.5.4",
@@ -38,5 +32,11 @@
     "prettier-config-atomic": "^3.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "keywords": [
+    "terser",
+    "minify",
+    "preset",
+    "config"
+  ]
 }

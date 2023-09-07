@@ -1,10 +1,10 @@
 /**
-  Get the terser options for the given environment.
-
-  @param NODE_ENV - The Node environment (defaults to "production").
-  @param BABEL_ENV - The Babel environment (defaults to NODE_ENV).
-  @param unsafeCompress - Whether to use unsafe compression options (defaults to false).
-*/
+ * Get the terser options for the given environment.
+ *
+ * @param NODE_ENV - The Node environment (defaults to "production").
+ * @param BABEL_ENV - The Babel environment (defaults to NODE_ENV).
+ * @param unsafeCompress - Whether to use unsafe compression options (defaults to false).
+ */
 export function buildTerserOptions(
   NODE_ENV: string = "production",
   BABEL_ENV: string | undefined = undefined,
