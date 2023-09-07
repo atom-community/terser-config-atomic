@@ -1,4 +1,4 @@
-export function getTerserOptions(NODE_ENV: string = "production", BABEL_ENV?: string) {
+export function getTerserOptions(NODE_ENV: string = "production", BABEL_ENV: string | undefined = undefined) {
   const isDev = NODE_ENV === "development"
   const isTest = NODE_ENV === "test"
   const isReadable = isDev || isTest
