@@ -1,7 +1,9 @@
 name: CI
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   Test:
@@ -14,7 +16,7 @@ jobs:
         os:
           - ubuntu-22.04
         node:
-          - 20
+          - 18
         pnpm:
           - 8
     steps:
