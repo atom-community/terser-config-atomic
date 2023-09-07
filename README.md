@@ -43,6 +43,32 @@ The config is adapted based on `NODE_ENV`, so make sure to run your scripts with
 
 **Note**: [`cross-env`](https://www.npmjs.com/package/cross-env) is an npm package that you need to install.
 
+## Options
+
+You can import the builder function to create a custom config:
+
+```ts
+import { buildTerserOptions } from "terser-config-atomic/dist/builder.js"
+module.exports = buildTerserOptions(process.env.NODE_ENV, process.env.BABEL_ENV)
+```
+
+The builder function:
+
+```ts
+/**
+ * Get the terser options for the given environment.
+ *
+ * @param NODE_ENV - The Node environment (defaults to "production").
+ * @param BABEL_ENV - The Babel environment (defaults to NODE_ENV).
+ * @param unsafeCompress - Whether to use unsafe compression options (defaults to false).
+ */
+export function buildTerserOptions(
+  NODE_ENV: string = "production",
+  BABEL_ENV: string | undefined = undefined,
+  unsafeCompress: boolean = false,
+)
+```
+
 ## Modifying the config
 
 To change the config use the following pattern:
