@@ -23,15 +23,15 @@
   "prettier": "prettier-config-atomic",
   "devDependencies": {
     "@swc/jest": "^0.2.29",
-    "@types/jest": "^29.5.4",
-    "@types/node": "^20.5.9",
-    "eslint": "^8.48.0",
-    "eslint-config-atomic": "^1.19.3",
-    "jest": "^29.6.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.0.0",
+    "eslint-config-atomic": "^2.0.0",
+    "jest": "^30.0.0",
     "prettier": "^3.0.3",
-    "prettier-config-atomic": "^3.1.0",
+    "prettier-config-atomic": "^4.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^7.0.0"
   },
   "keywords": [
     "terser",
